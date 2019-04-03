@@ -28,7 +28,9 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    'element-ui/lib/theme-chalk/reset.css',
+   // '~assets/css/main.css'
   ],
 
   /*
@@ -42,14 +44,18 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios'
   ],
+  axios:{
+
+  },
 
   /*
   ** Build configuration
   */
   build: {
     transpile: [/^element-ui/],
-    
+
     /*
     ** You can extend webpack config here
     */
