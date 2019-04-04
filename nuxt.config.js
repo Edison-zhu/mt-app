@@ -30,24 +30,27 @@ module.exports = {
   css: [
     'element-ui/lib/theme-chalk/index.css',
     'element-ui/lib/theme-chalk/reset.css',
-   // '~assets/css/main.css'
+    '~assets/css/main.css'
+
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    { src: "~plugins/axios.js", ssr: true },
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/axios'
+    "@nuxtjs/axios", "@nuxtjs/proxy"
   ],
-  axios:{
-
+  axios: {
+    prefix: '/api/',
+    proxy: true // Can be also an object with default options
   },
 
   /*
@@ -55,6 +58,7 @@ module.exports = {
   */
   build: {
     transpile: [/^element-ui/],
+    vendor:['axios'],
 
     /*
     ** You can extend webpack config here
