@@ -49,7 +49,7 @@
     .nav {
       list-style: none;
       float: right;
-      height: 40px;
+      height: 50px;
       >li {
         float: left;
         width: 78px;
@@ -156,10 +156,11 @@
             margin-right: 47px;
 
             dt {
-              margin-bottom: 26px;
+              margin-bottom: 30px;
               font-size: 14px;
               color: #31BBAC;
               text-align: center;
+              //margin-left: 50px;
             }
 
             dd {
@@ -169,11 +170,12 @@
             }
 
             &.hotel {
-              width: 234px;
+             // width: 234px;
+              width: 284px;
             }
 
             &.food {
-              width: 156px;
+              width: 246px;
             }
 
             &.movie {
@@ -184,7 +186,7 @@
             }
 
             &.app {
-              width: 380px;
+              width: 390px;
               flex: 1;
               text-align: center;
               dd {

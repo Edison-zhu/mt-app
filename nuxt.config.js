@@ -60,10 +60,11 @@ module.exports = {
     transpile: [/^element-ui/],
     vendor:['axios'],
 
-    /*
+    /*2
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      cache:false
     }
   }
 }

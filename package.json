@@ -1,5 +1,5 @@
 {
-  "name": "meituan",
+  "name": "Edison",
   "version": "1.0.0",
   "description": "",
   "author": "zyb955140",
@@ -35,6 +35,7 @@
     "style-loader": "^0.23.1",
     "stylus-loader": "^3.0.2",
     "vue-jest": "^3.0.3",
-    "scss-loader": "^0.0.1"
+    "scss-loader": "^0.0.1",
+    "tronweb": "^2.3.8"
   }
 }
