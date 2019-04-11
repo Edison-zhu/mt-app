@@ -1,6 +1,5 @@
 const pkg = require('./package')
 
-
 module.exports = {
   mode: 'universal',
 
@@ -22,49 +21,48 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#FFFFFF' },
 
   /*
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css',
     'element-ui/lib/theme-chalk/reset.css',
-    '~assets/css/main.css'
-
+    'element-ui/lib/theme-chalk/index.css',
+    '@/assets/css/main.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui',
-    { src: "~plugins/axios.js", ssr: true },
+    '@/plugins/element-ui'
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    "@nuxtjs/axios", "@nuxtjs/proxy"
+    // Doc: https://github.com/nuxt-community/axios-module#usage
+    '@nuxtjs/axios'
   ],
+  /*
+  ** Axios module configuration
+  */
   axios: {
-    prefix: '/api/',
-    proxy: true // Can be also an object with default options
+    // See https://github.com/nuxt-community/axios-module#options
   },
 
   /*
   ** Build configuration
   */
   build: {
-    transpile: [/^element-ui/],
-    vendor:['axios'],
-
-    /*2
+    /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      cache:false
-    }
+    },
+    // https://github.com/nuxt/nuxt.js/issues/3804
+    cache:false
   }
 }
